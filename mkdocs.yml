@@ -1,0 +1,23 @@
+site_name: Portfólio Técnico - Charles Paiva
+site_description: Meus estudos, projetos e arquitetura com Java
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: light blue
+  language: pt
+
+nav:
+  - Início: index.md
+  - Projetos:
+      - Sistema de Pedidos: projetos/pedido-service.md
+      - API de Pagamentos: projetos/api-pagamentos.md
+  - Arquitetura:
+      - Hexagonal: arquitetura/hexagonal.md
+      - Event Sourcing: arquitetura/event-sourcing.md
+  - Design Patterns:
+      - Strategy: design-patterns/strategy.md
+      - Factory: design-patterns/factory.md
+  - DevOps:
+      - Docker: devops/docker.md
+      - GitHub Actions: devops/github-actions.md

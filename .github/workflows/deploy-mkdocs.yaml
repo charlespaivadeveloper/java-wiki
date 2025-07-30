@@ -10,17 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Setup Python 3.x
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs-material
+      - name: Install MkDocs and Material theme
+        run: pip install mkdocs-material
 
-      - name: Build and Deploy
+      - name: Deploy site to GitHub Pages
         run: mkdocs gh-deploy --force
